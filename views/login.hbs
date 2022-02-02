@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+</head>
+
+<body>
+    <h1 align="center">Sistema de Administración de Usuarios</h1>
+    <h2>Inicio de sesión</h2>
+    <p>A continuación, diligencie todos los campos para el inicio de sesión:</p>
+    <div>
+        <form action="/login" method="post">
+            <table align="left">
+                <div>
+                    <tr>
+                        <th align="left">
+                            Correo
+                        </th>
+                        <td align="center">
+                            <p></p>
+                            <input type="text" name="email" value="{{old.email}}"></p>
+                            {{errors.email.msg}}{{errorEmail.msg}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="left">
+                            Contraseña
+                        </th>
+                        <td align="center">
+                            <p></p>
+                            <input type="password" name="password"></p>
+                            {{errors.msg}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align=>
+                        <input type="submit" value="Iniciar sesión">
+                        </td>
+                    </tr>
+            </table>
+    </form>
+</body>
+
+</html>

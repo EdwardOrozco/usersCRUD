@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de usarios</title>
+</head>
+<body>
+    <h1 align="center">Sistema de Administración de Usuarios</h1>
+    <h2>Listado de usarios</h2>
+    <p>A continuación se listan los usarios registrados en la página:</p>
+    <p>
+        <ul>
+            {{#each showUsers}}
+            <li> <a href="/users/userDetails/{{this.id}}">{{this.username}}</a>
+            </li>
+            {{/each}}
+        </ul>
+        </p>
+<p>
+    <a href="/users/createUser"><button> Añadir usuario</button></a>
+</p>
+</body>
+
+</html>

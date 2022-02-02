@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de usuario</title>
+</head>
+
+<body>
+    <h1 align="center">Sistema de Administración de Usuarios</h1>
+    <h2>Creación de usuario</h2>
+    <p>A continuación, diligencie todos los campos para la creación del ususario:</p>
+    <div>
+        <form action="/users/createUser" method="post">
+            <table align="left">
+                <div>
+                    <tr>
+                        <th align="left">
+                            Username
+                        </th>
+                        <td align="center">
+                            <p></p>
+                            <input type="text" name="username" value="{{old.username}}"></p>
+                            {{errors.username.msg}}{{errorUsername.msg}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="left">
+                            Nombre
+                        </th>
+                        <td align="center">
+                            <p></p>
+                            <input type="text" name="first_name" value="{{old.first_name}}"></p>
+                            {{errors.first_name.msg}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="left">
+                            Apellido
+                        </th>
+                        <td align="center">
+                            <p></p>
+                            <input type="text" name="last_name" value="{{old.last_name}}"> </p> {{errors.last_name.msg}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="left">
+                            Correo
+                        </th>
+                        <td align="center">
+                            <p></p>
+                            <input type="text" name="email" value="{{old.email}}"></p>
+                            {{errors.email.msg}}{{errorEmail.msg}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Crear usuario">
+                        </td>
+                    </tr>
+            </table>
+    </form>
+</body>
+
+</html>

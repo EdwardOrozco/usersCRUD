@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Administración de Usuarios</title>
+</head>
+
+<body>
+    <h1 align="center">Sistema de Administración de Usuarios</h1>
+    <h2>Confirmación de eliminación</h2>
+    <p>¿Está seguro que desea eliminar el siguiente usuario?</p>
+    <p>
+    <table border="all" align="center">
+        <tr>
+            <th>
+                ID
+            </th>
+            <td align="center">
+                {{infoUser.id}}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Username
+            </th>
+            <td align="center">
+                {{infoUser.username}}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Nombres
+            </th>
+            <td align="center">
+                {{infoUser.first_name}}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Apellidos
+            </th>
+            <td align="center">
+                {{infoUser.last_name}}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Correo
+            </th>
+            <td align="center">
+                {{infoUser.email}}
+            </td>
+        </tr>
+    </table>
+    </p>
+    <form action="/users/deleteUser/{{infoUser.id}}" method="POST" align="center">
+        <button type="submit" align="center">Eliminar usuario</button>
+        <a href="/users/usersList" align="center"><button> Cancelar</button></a>
+    </form>
+</body>
+
+</html>
